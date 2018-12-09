@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body{
+	margin:0;
+	margin-top: 70px;
+	padding-top: 0;
+	background: linear-gradient(135deg,#000,#30a9f4);
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.contain{
+  position: fixed;
+  top: -0.5%;
+  left: 50%;
+  transform: translate(-50%,0.5%);
+  padding:10px;
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg,#000,#30a9f4);
+  background-size: 200% 200%;
+  border-bottom: 1px solid rgba(0,0,0,1.0);
+}
+.contain .logo{
+	margin: 12px 30px;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+.contain ul{
+  position: relative;
+  top:-1%;
+  left:63.5%;
+  transform: translate(-60%,1%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.contain ul li{
+  list-style: none;
+
+}
+.contain ul li a{
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight:bolder;
+  transition: .5s;
+  font-size: 20px;
+}
+.contain ul li a:hover{
+  color: #000;
+}
+.contain ul li a:after{
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width:100%;
+  height: 85%;
+  margin-top: 3%;
+  border-radius: 10px;
+  background: #fff;
+  transform: scale(0);
+  transition: .4s;
+  z-index: -1;
+}
+.contain ul li a:hover:after{
+  transform: scale(1);
+  opacity: 0.5;
+}
+
+
+
+.container{
+	width: 1280px;
+	margin: 0 auto 0;
+	display: block;
+}
+.container .box{
+	position: relative;
+	width: 1280px;
+	height: 160px;
+	border:2px solid rgba(41, 182, 246,1.0);
+	background: linear-gradient(45deg,#000,#30a9f4);
+	margin-bottom: 10px;
+	box-sizing: padding-box;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 20px;
+	transition: all 0.3s ease;
+}
+.container .box:hover{
+	transform: scale(1.03);
+	box-shadow: 2px 5px 8px rgba(0,0,0,1.0);
+}
+.container .box .tbl{
+	padding: 10px;
+	margin: 10px;
+	position: absolute;
+	width: 700px;
+	top: 10px;
+	left:400px;
+	bottom: 10px;
+	right: 10px;
+	color:#fff;
+	opacity: 0.9;
+	font-weight: 500;
+	line-height: 15px;
+	font-family: sans-serif;
+	transition: opacity .4s ease;
+}
+.container .box:hover .tbl{
+	opacity: 0;
+}
+.container .box .tbl th{
+	width:150px;
+	height: 40px;
+	font-size: 18px;
+	text-decoration:underline;
+	text-transform: uppercase;
+}
+.container .box .tbl td{
+	width: 150px;
+	height: 40px;
+	text-align: center;
+	line-height: 15px;
+
+}
+.container .box .details{
+	position: absolute;
+	width: 950px;
+	float: right;
+	top: 10px;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 20px;
+	background: rgba(255,255,255,1);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+.container .box:hover .details{
+	transform: scaleY(1);
+}
+.container .box .details .content{
+	position: absolute;
+	top: 50%;
+	width: 800px;
+	transform: translateY(-50%);
+	padding: 15px;
+	color: #000;
+	font-weight: lighter;
+}
+.container .box .details .content h2{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #FF5733;
+}
+.container .box .details .content p{
+	margin: 10px 0 0;
+	font-size: 18px;
+	padding: 0;
+}
+.container .box .details .btn{
+	margin-top: 92px;
+	margin-right: 20px;
+	float: right;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	width: 80px;
+	height: 22px;
+	font-weight: 700;
+	padding: 5px;
+	border: none;
+	outline: none;
+	background: #E0E0E0;
+	color:#000;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+.container .box .details .btn1{
+	margin-top: 92px;
+	margin-right: 20px;
+	float: right;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	width: 90px;
+	height: 22px;
+	font-weight: 700;
+	padding: 5px;
+	border: none;
+	outline: none;
+	background: #00C853;
+	color:#333;
+	overflow: hidden;
+}
+.container .box .details .btn:hover{
+	background: #039BE5;
+	color: #fff;
+	transform: scale(1.1);
+}
+.container .box .details .content label{
+	font-size: 12px;
+	margin-top: 5px;
+	color: green;
+}
+.footer{
+	padding: 20px 10px;
+	border-top: 1px solid rgba(50,50,50,0.5);
+	background: linear-gradient(45deg,#000,#30a9f4);
+	color: #fff;
+}
+.footer .foot-head h3{
+	width: 190px;
+}
+.footer .foot-bottom h6{
+	width: 100px;
+}
+.footer .foot-head h3,
+.footer .foot-bottom h6{
+	margin: 0;
+	padding: 10px 20px;
+}
+.footer .foot-bottom{
+	position: relative;
+	bottom: 0;
+}

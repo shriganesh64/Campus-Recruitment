@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow: hidden;
+	color:#000;
+}
+.up{
+	position: absolute;
+	width:100%;
+	height:50%;
+	top:0%;
+	background: linear-gradient(45deg,#000,#30a9f4);
+	background-size: 200% 200%;
+	background-position: 50% 25%;
+	z-index: -1;
+}
+.bottom{
+	position: absolute;
+	width:100%;
+	height:50%;
+	top:50%;
+	background: linear-gradient(315deg,#30a9f4,#000);
+	background-size: 200% 200%;
+	background-position: 50% 25%;
+	z-index: -1;
+}
+.box{
+	overflow: hidden;
+}
+.box .head h2{
+	margin:0 0 30px;
+	padding:0;
+	letter-spacing: 2px;
+	text-align: center;
+	color:#000;
+}
+.box .head{
+	width: 80px;
+	overflow: hidden;
+	position: relative;
+	top:0%;
+	left:50%;
+	transform: translate(-50%,0%);
+}
+.box .head:before{
+	  content: '';
+	  position: absolute;
+	  top:50%;
+	  left: 0;
+	  width: 100%;
+	  height: 2px;
+	  background: #03a9f4;
+	  transform-origin: center;
+	  transform: scaleX(0);
+	  animation:animate .5s linear forwards;
+	  animation-delay: 3.8s;
+}
+@keyframes animate{
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}
+.content{
+	position: absolute;
+	width:280px;
+	animation: slide 1.5s forwards cubic-bezier(.14,-0.19,.8,1.15);
+	padding: 10px 25px;
+	padding-right: 50px;
+}
+@keyframes slide{
+	0%{
+		top:40%;
+		left:30%;
+		transform: translate(-280%,-40%);
+	}
+	100%{
+		top:40%;
+		left:30%;
+		transform: translate(-30%,-40%);
+	}
+}
+.content:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 0%;
+	border-top: 3px dashed #30a9f4;
+	border-left: 3px dashed #30a9f4;
+	border-top-left-radius: 5px;
+	opacity: 0;
+	z-index: -1;
+	animation: in 2s forwards;
+	animation-delay: 1.7s;
+}
+.content:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0%;
+	height: 0%;
+	border-bottom: 3px dashed #30a9f4;
+	border-right: 3px dashed #30a9f4;
+	border-bottom-right-radius: 5px;
+	opacity: 0;
+	z-index: -1;
+	animation: in 2s forwards;
+	animation-delay: 1.7s;
+}
+@keyframes in{
+	0%{
+		width:0%;
+		height: 0%;
+	}
+	100%{
+		width: 55%;
+		height: 55%;
+		opacity: 1;
+	}
+}
+.content h1{
+	font-size: 39px;
+	margin-bottom: 60px;
+	color:#30a9f4;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+}
+.content p{
+	font-size: 18px;
+	color: #0f0;
+	line-height: 25px;
+	letter-spacing: 2px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 30px;
+}
+.box{
+	color:#3080cc;
+	position: absolute;
+	margin:0;
+	width:420px;
+	height: 450px;
+	padding: 40px;
+	box-sizing: border-box;
+	top:50%;
+	left:95%;
+	transform: translate(-95%,-50%);
+	background: rgba(179, 229, 252,1.0);
+	border-radius: 10px;
+}
+.box .inputBox{
+	position: relative;
+}
+.box .inputBox:nth-child(1){
+	margin-top: 10%;
+}
+.box .inputBox input{
+	width:100%;
+	padding: 10px 2px;
+	font-size: 15px;
+	color:#000;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 60px;
+	border:none;
+	border-bottom: 2px solid #03a9f4; 
+	box-sizing: border-box;
+	outline:none;
+	background: transparent;
+}
+.box .inputBox label{
+	font-weight: normal;
+	position: absolute;
+	top:0;
+	left: 0;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: bold;
+	color:#000;
+	pointer-events: none;
+	transition: .5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
+	top:-20px;
+	left:0;
+	font-weight: bolder;
+	color:#000;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+.box .input1{
+	position: absolute;
+	bottom: 12%;
+	width: 345px;
+}
+.box .input1 input{
+	font-size:15px;
+	border:none;
+	width: 100%;
+	height: 38px;
+	outline: none;
+	color:#fff;
+	text-transform: uppercase;
+	font-weight: bolder;
+	background:#03a9f4;
+	padding: 10px 20px;
+	border-radius:5px; 
+	cursor:pointer;
+	transition: background 0.2s ease;
+}
+.box .input1 input:hover,
+.box .input1 input:focus
+{
+	background: #ECEBEB;
+	color:#000;
+	border: 1px solid #919191;
+}
+.box a{
+	position: absolute;
+	left: 44%;
+	top: 90%;
+	text-decoration: none;
+	color: #EF5350;
+	font-weight: 600;
+	transition: all 0.8s ease;
+}
+.box a:hover,.box a:focus{
+	text-decoration: underline;
+	text-decoration-color: #EF5350;
+}
+.container{
+  position: absolute;
+  top: -0.5%;
+  left: 50%;
+  transform: translate(-50%,0.5%);
+  padding:10px;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg,#000,#30a9f4);
+  background-size: 200% 200%;
+  background-position: 50% 25%;
+  border-bottom: 1px solid rgba(50,50,50,.5);
+}
+.container .logo{
+	margin: 12px 30px;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+.container ul{
+  position: relative;
+  top:-1%;
+  left:65%;
+  transform: translate(-65%,1%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.container ul li{
+  list-style: none;
+
+}
+.container ul li a{
+  position: relative;
+  display: block;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 1;
+  transition: .5s;
+  font-size: 20px;
+}
+.container ul li a:hover{
+  color: #000;
+}
+.container ul li a:after{
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width:100%;
+  height: 85%;
+  margin-top: 4%;
+  border-radius: 10px;
+  background: #03a9f4;
+  transform: scale(0);
+  transition: .3s;
+  z-index: -1;
+}
+.container ul li a:hover:after{
+  transform: scale(1);
+  opacity: 1;
+}
